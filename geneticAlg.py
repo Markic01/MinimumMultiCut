@@ -80,20 +80,20 @@ def ga(population_size, num_generations, tournament_size, elitism_size, mutation
         population = new_population.copy()
     return max(population, key=lambda x: x.fitness)
 
+if __name__ == '__main__':
+    G = nx.read_gml("tests/test")
+    import json
 
-G = nx.read_gml("tests/test")
-import json
-
-with open('tests/test.json', 'r') as file:
-    source_terminal_pairs = json.load(file)
-best = ga(
-    population_size=1000,
-    num_generations=7,
-    tournament_size=7,
-    elitism_size=10,
-    mutation_prob=0.1,
-    graph=G,
-    source_terminal_pairs = source_terminal_pairs
-)
-print(best.code)
-print(best.fitness)
+    with open('tests/test.json', 'r') as file:
+        source_terminal_pairs = json.load(file)
+    best = ga(
+        population_size=1000,
+        num_generations=7,
+        tournament_size=7,
+        elitism_size=10,
+        mutation_prob=0.1,
+        graph=G,
+        source_terminal_pairs = source_terminal_pairs
+    )
+    print(best.code)
+    print(best.fitness)

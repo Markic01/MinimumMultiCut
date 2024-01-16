@@ -40,22 +40,23 @@ def calc_fitness(code, graph: nx.Graph, source_terminal_pairs) -> float:
         return float('inf')
     return 1/value
 
-graph = nx.read_gml("tests/test")
+if __name__ == '__main__':
+    graph = nx.read_gml("tests/test")
 
-with open('tests/test.json', 'r') as file:
-    source_terminal_pairs = json.load(file)
+    with open('tests/test.json', 'r') as file:
+        source_terminal_pairs = json.load(file)
 
-num_edges = len(graph.edges())
+    num_edges = len(graph.edges())
 
-best_code = None
-best_fitness = float('-inf')
+    best_code = None
+    best_fitness = float('-inf')
 
-for i in range(1 << num_edges):
-    code = number_to_fixed_length_boolean_list(i, num_edges)
-    fit = calc_fitness(code, graph, source_terminal_pairs)
-    if best_code == None or best_fitness < fit:
-        best_code = copy.deepcopy(code)
-        best_fitness = copy.deepcopy(fit)
+    for i in range(1 << num_edges):
+        code = number_to_fixed_length_boolean_list(i, num_edges)
+        fit = calc_fitness(code, graph, source_terminal_pairs)
+        if best_code == None or best_fitness < fit:
+            best_code = copy.deepcopy(code)
+            best_fitness = copy.deepcopy(fit)
 
-print(best_code)
-print(best_fitness)
+    print(best_code)
+    print(best_fitness)
