@@ -1,0 +1,120 @@
+Test:  Graph with 35 nodes and 303 edges  node_pairs:  [[6, 1]]
+brute force:
+	takes too long
+
+variable neighborhood search:
+	best=0.0017605633802816902 worst=0.001589825119236884 average=0.0016811718102082186
+
+genetic algorithm
+	best=0.0018248175182481751 worst=0.0015923566878980893 average=0.0016902198457619474
+
+Test:  Graph with 80 nodes and 988 edges  node_pairs:  [[78, 29], [14, 17]]
+brute force:
+	takes too long
+
+variable neighborhood search:
+	best=0.00021963540522732265 worst=-inf       average=-inf      
+
+genetic algorithm
+	best=0.00020312817387771684 worst=-inf       average=-inf      
+
+Test:  Graph with 20 nodes and 86 edges  node_pairs:  [[7, 14], [5, 18], [16, 1]]
+brute force:
+	takes too long
+
+variable neighborhood search:
+	best=0.0064516129032258064 worst=0.005235602094240838 average=0.005827346986121249
+
+genetic algorithm
+	best=0.006097560975609756 worst=0.005434782608695652 average=0.005906764038652644
+
+Test:  Graph with 60 nodes and 578 edges  node_pairs:  [[4, 22]]
+brute force:
+	takes too long
+
+variable neighborhood search:
+	best=0.0008097165991902834 worst=0.0007507507507507507 average=0.0007868867857419816
+
+genetic algorithm
+	best=0.0008271298593879239 worst=0.0007668711656441718 average=0.0007876501448717245
+
+Test:  Graph with 9 nodes and 18 edges  node_pairs:  [[7, 8]]
+brute force:
+	best fitness: 0.06666666666666667
+
+variable neighborhood search:
+	best=0.06666666666666667 worst=0.06666666666666667 average=0.06666666666666667
+
+genetic algorithm
+	best=0.06666666666666667 worst=0.06666666666666667 average=0.06666666666666667
+
+Test:  Graph with 40 nodes and 312 edges  node_pairs:  [[24, 28], [24, 19], [23, 1]]
+brute force:
+	takes too long
+
+variable neighborhood search:
+	best=0.0007434944237918215 worst=-inf       average=-inf      
+
+genetic algorithm
+	best=0.0011904761904761906 worst=-inf       average=-inf      
+
+Test:  Graph with 35 nodes and 158 edges  node_pairs:  [[29, 33]]
+brute force:
+	takes too long
+
+variable neighborhood search:
+	best=0.005952380952380952 worst=0.005050505050505051 average=0.00541922188817362
+
+genetic algorithm
+	best=0.006578947368421052 worst=0.005050505050505051 average=0.0055348594518502894
+
+Test:  Graph with 60 nodes and 856 edges  node_pairs:  [[39, 25]]
+brute force:
+	takes too long
+
+variable neighborhood search:
+	best=0.0003180661577608143 worst=-inf       average=-inf      
+
+genetic algorithm
+	best=0.0004389815627743635 worst=-inf       average=-inf      
+
+Test:  Graph with 6 nodes and 8 edges  node_pairs:  [[5, 0], [1, 5], [3, 4]]
+brute force:
+	best fitness: 0.041666666666666664
+
+variable neighborhood search:
+	best=0.041666666666666664 worst=0.04       average=0.0415    
+
+genetic algorithm
+	best=0.041666666666666664 worst=0.041666666666666664 average=0.04166666666666667
+
+Test:  Graph with 5 nodes and 7 edges  node_pairs:  [[0, 4], [4, 0], [2, 0]]
+brute force:
+	best fitness: 0.06666666666666667
+
+variable neighborhood search:
+	best=0.06666666666666667 worst=0.06666666666666667 average=0.06666666666666667
+
+genetic algorithm
+	best=0.06666666666666667 worst=0.06666666666666667 average=0.06666666666666667
+
+Test:  Graph with 100 nodes and 1015 edges  node_pairs:  [[80, 60], [92, 78]]
+brute force:
+	takes too long
+
+variable neighborhood search:
+	best=0.00023860653781913624 worst=0.00019896538002387584 average=0.00020461707166493314
+
+genetic algorithm
+	best=0.0002376425855513308 worst=-inf       average=-inf      
+
+Test:  Graph with 60 nodes and 360 edges  node_pairs:  [[49, 8]]
+brute force:
+	takes too long
+
+variable neighborhood search:
+	best=0.001564945226917058 worst=0.0014204545454545455 average=0.001509874421257377
+
+genetic algorithm
+	best=0.0015337423312883436 worst=0.0014388489208633094 average=0.0014753729541288172
+
