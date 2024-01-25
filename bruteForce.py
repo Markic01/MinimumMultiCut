@@ -3,8 +3,8 @@ import copy
 import json
 
 def number_to_fixed_length_boolean_list(number, fixed_length):
-    binary_string = bin(number)[2:]  # Convert to binary and remove the '0b' prefix
-    binary_string = binary_string.zfill(fixed_length)  # Pad with leading zeros
+    binary_string = bin(number)[2:]
+    binary_string = binary_string.zfill(fixed_length)
     boolean_list = [bit == '1' for bit in binary_string]
     return boolean_list
 
@@ -36,16 +36,12 @@ def calc_fitness(code, graph: nx.Graph, source_terminal_pairs) -> float:
         if not code[i]:
             x,y = edges[i]
             value += graph[x][y]['weight']
+
     if value == 0:
         return float('inf')
     return 1/value
 
-if __name__ == '__main__':
-    graph = nx.read_gml("tests/test")
-
-    with open('tests/test.json', 'r') as file:
-        source_terminal_pairs = json.load(file)
-
+def brute_force_main(graph: nx.Graph, source_terminal_pairs):
     num_edges = len(graph.edges())
 
     best_code = None
@@ -58,5 +54,14 @@ if __name__ == '__main__':
             best_code = copy.deepcopy(code)
             best_fitness = copy.deepcopy(fit)
 
-    print(best_code)
+    return best_code, best_fitness
+
+
+if __name__ == '__main__':
+    graph = nx.read_gml("tests/test_5_0.6")
+
+    with open('tests/test_5_0.6.json', 'r') as file:
+        source_terminal_pairs = json.load(file)
+
+    best_code, best_fitness = brute_force_main(graph, source_terminal_pairs)
     print(best_fitness)

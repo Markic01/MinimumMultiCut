@@ -1,13 +1,13 @@
 import random
 import networkx as nx
-import sys
-import copy
+import json
+
 
 class Individual:
     def __init__(self, graph: nx.Graph, source_terminal_pairs: list) -> None:
         self.source_terminal_pairs = source_terminal_pairs
         self.edges: list = list(graph.edges())
-        self.code: list = [random.random() < 0.5 for _ in range(len(self.edges))]
+        self.code: list = [random.random() < 0.1 for _ in range(len(self.edges))]
         self.fitness: int = self.calc_fitness(graph)
         
     def is_valid(self, graph: nx.Graph) -> bool:
@@ -17,8 +17,8 @@ class Individual:
 
         for i in range(len(self.code)):
             if self.code[i]:
-                x,y = self.edges[i]
-                new_graph.add_edge(x,y,weight = graph[x][y]['weight'])
+                source, dest = self.edges[i]
+                new_graph.add_edge(source , dest, weight = graph[source][dest]['weight'])
 
         for x,y in self.source_terminal_pairs:
             x,y = str(x),str(y)
@@ -33,8 +33,8 @@ class Individual:
         value = 0
         for i in range(len(self.edges)):
             if not self.code[i]:
-                x,y = self.edges[i]
-                value += graph[x][y]['weight']
+                source, dest = self.edges[i]
+                value += graph[source][dest]['weight']
 
         if value == 0:
             return float('inf')
@@ -42,7 +42,7 @@ class Individual:
     
 def selection(population, tournament_size) -> Individual:
     chosen = random.sample(population, tournament_size)
-    return max(chosen, key=lambda x: x.fitness)
+    return max(chosen, key=lambda individual: individual.fitness)
 
 def crossover(parent1: Individual, parent2, child1, child2) -> None:
     random_pos = random.randrange(0, len(parent1.code))
@@ -80,20 +80,25 @@ def ga(population_size, num_generations, tournament_size, elitism_size, mutation
         population = new_population.copy()
     return max(population, key=lambda x: x.fitness)
 
-if __name__ == '__main__':
-    G = nx.read_gml("tests/test")
-    import json
-
-    with open('tests/test.json', 'r') as file:
-        source_terminal_pairs = json.load(file)
+def ga_main(graph: nx.Graph, source_terminal_pairs):
     best = ga(
         population_size=1000,
-        num_generations=7,
-        tournament_size=7,
-        elitism_size=10,
+        num_generations=70,
+        tournament_size=27,
+        elitism_size=50,
         mutation_prob=0.1,
-        graph=G,
+        graph=graph,
         source_terminal_pairs = source_terminal_pairs
     )
-    print(best.code)
-    print(best.fitness)
+
+    return best.code, best.fitness
+    
+
+if __name__ == '__main__':
+    graph = nx.read_gml("tests/test_40_0.4")
+
+    with open('tests/test_40_0.4.json', 'r') as file:
+        source_terminal_pairs = json.load(file)
+
+    best_code, best_fitness = ga_main(graph, source_terminal_pairs)
+    print(best_fitness)
