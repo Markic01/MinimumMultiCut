@@ -23,9 +23,9 @@ for i in range(len(input_files)):
     with open('tests/' + input_json_files[i], 'r') as file:
         source_terminal_pairs = json.load(file)
 
-    print(graph,' ', source_terminal_pairs, '\n')
+    print('Test: ', graph, ' node_pairs: ', source_terminal_pairs)
 
-    repeat = 2
+    repeat = 10
 
     if do_brute_force(graph):
         best_code, best_fitness = brute_force_main(graph, source_terminal_pairs)
