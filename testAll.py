@@ -46,13 +46,18 @@ for i in range(len(input_files)):
         _, fitness = ga_main(graph, source_terminal_pairs)
         ga_fitness.append(fitness)
     print(f'genetic algorithm')
-    print(f'\tbest={max(ga_fitness):<10} worst={min(ga_fitness):<10} average={sum(ga_fitness)/repeat:<10}')
+    print(f'\tbest={max(ga_fitness):<10} worst={min(ga_fitness):<10} average={sum(ga_fitness)/repeat:<10}\n')
 
     tabu_fitness = []
     for _ in range(repeat):
         _, fitness = tabu_main(graph, source_terminal_pairs)
         tabu_fitness.append(fitness)
     print(f'tabu search')
-    print(f'\tbest={max(tabu_fitness):<10} worst={min(tabu_fitness):<10} average={sum(tabu_fitness)/repeat:<10}')
+    print(f'\tbest={max(tabu_fitness):<10} worst={min(tabu_fitness):<10} average={sum(tabu_fitness)/repeat:<10}\n')
 
-    print()
+    greedy_fitness = []
+    for _ in range(repeat):
+        _, fitness = tabu_main(graph, source_terminal_pairs)
+        greedy_fitness.append(fitness)
+    print(f'greedy')
+    print(f'\tbest={max(greedy_fitness):<10} worst={min(greedy_fitness):<10} average={sum(greedy_fitness)/repeat:<10}\n\n')

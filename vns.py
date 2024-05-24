@@ -60,7 +60,7 @@ def vns(graph: nx.Graph, source_terminal_pairs, vns_params: dict):
 def vns_main(graph: nx.Graph, source_terminal_pairs):
     vns_params = {
         'iters': 20000,
-        'time_limit': 20,
+        'time_limit': 5,
         'k_min': 2,
         'k_max': 6,
         'move_prob': 0.1,
