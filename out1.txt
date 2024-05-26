@@ -1,0 +1,132 @@
+Test:  Graph with 35 nodes and 303 edges  node_pairs:  [[6, 1]]
+brute force:
+	takes too long
+
+tabu search
+	best=0.003067484662576687 worst=0.003067484662576687 average=0.003067484662576687
+
+greedy
+	best=0.0051813471502590676 worst=0.0051813471502590676 average=0.005181347150259067
+
+
+Test:  Graph with 80 nodes and 988 edges  node_pairs:  [[78, 29], [14, 17]]
+brute force:
+	takes too long
+
+tabu search
+	best=0.0002765486725663717 worst=0.0002765486725663717 average=0.0002765486725663717
+
+greedy
+	best=0.0030581039755351682 worst=0.0030581039755351682 average=0.0030581039755351687
+
+
+Test:  Graph with 20 nodes and 86 edges  node_pairs:  [[7, 14], [5, 18], [16, 1]]
+brute force:
+	takes too long
+
+tabu search
+	best=0.006060606060606061 worst=0.006060606060606061 average=0.00606060606060606
+
+greedy
+	best=0.006060606060606061 worst=0.006060606060606061 average=0.00606060606060606
+
+
+Test:  Graph with 60 nodes and 578 edges  node_pairs:  [[4, 22]]
+brute force:
+	takes too long
+
+tabu search
+	best=0.0006920415224913495 worst=0.0006920415224913495 average=0.0006920415224913496
+
+greedy
+	best=0.0055248618784530384 worst=0.0055248618784530384 average=0.0055248618784530384
+
+
+Test:  Graph with 9 nodes and 18 edges  node_pairs:  [[7, 8]]
+brute force:
+	best fitness: 0.06666666666666667
+
+tabu search
+	best=0.06666666666666667 worst=0.06666666666666667 average=0.06666666666666667
+
+greedy
+	best=0.06666666666666667 worst=0.06666666666666667 average=0.06666666666666667
+
+
+Test:  Graph with 40 nodes and 312 edges  node_pairs:  [[24, 28], [24, 19], [23, 1]]
+brute force:
+	takes too long
+
+tabu search
+	best=0.002967359050445104 worst=0.002967359050445104 average=0.0029673590504451035
+
+greedy
+	best=0.007142857142857143 worst=0.007142857142857143 average=0.0071428571428571435
+
+
+Test:  Graph with 35 nodes and 158 edges  node_pairs:  [[29, 33]]
+brute force:
+	takes too long
+
+tabu search
+	best=0.05555555555555555 worst=0.05555555555555555 average=0.055555555555555566
+
+greedy
+	best=0.05555555555555555 worst=0.05555555555555555 average=0.055555555555555566
+
+
+Test:  Graph with 60 nodes and 856 edges  node_pairs:  [[39, 25]]
+brute force:
+	takes too long
+
+tabu search
+	best=0.00035211267605633805 worst=0.00035211267605633805 average=0.00035211267605633805
+
+greedy
+	best=0.006944444444444444 worst=0.006944444444444444 average=0.006944444444444446
+
+
+Test:  Graph with 6 nodes and 8 edges  node_pairs:  [[5, 0], [1, 5], [3, 4]]
+brute force:
+	best fitness: 0.041666666666666664
+
+tabu search
+	best=0.041666666666666664 worst=0.041666666666666664 average=0.04166666666666667
+
+greedy
+	best=0.034482758620689655 worst=0.034482758620689655 average=0.03448275862068966
+
+
+Test:  Graph with 5 nodes and 7 edges  node_pairs:  [[0, 4], [4, 0], [2, 0]]
+brute force:
+	best fitness: 0.06666666666666667
+
+tabu search
+	best=0.06666666666666667 worst=0.06666666666666667 average=0.06666666666666667
+
+greedy
+	best=0.06666666666666667 worst=0.06666666666666667 average=0.06666666666666667
+
+
+Test:  Graph with 100 nodes and 1015 edges  node_pairs:  [[80, 60], [92, 78]]
+brute force:
+	takes too long
+
+tabu search
+	best=0.0002701242571582928 worst=0.0002701242571582928 average=0.0002701242571582929
+
+greedy
+	best=0.0031545741324921135 worst=0.0031545741324921135 average=0.003154574132492114
+
+
+Test:  Graph with 60 nodes and 360 edges  node_pairs:  [[49, 8]]
+brute force:
+	takes too long
+
+tabu search
+	best=0.0020325203252032522 worst=0.0020325203252032522 average=0.0020325203252032522
+
+greedy
+	best=0.0136986301369863 worst=0.0136986301369863 average=0.0136986301369863
+
+

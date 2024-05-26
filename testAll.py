@@ -2,6 +2,7 @@ from bruteForce import brute_force_main
 from vns import vns_main
 from geneticAlg import ga_main
 from tabuSearch import tabu_main
+from greedy import greedy
 import networkx as nx
 import json
 import os
@@ -57,7 +58,7 @@ for i in range(len(input_files)):
 
     greedy_fitness = []
     for _ in range(repeat):
-        _, fitness = tabu_main(graph, source_terminal_pairs)
+        _, fitness = greedy(graph, source_terminal_pairs)
         greedy_fitness.append(fitness)
     print(f'greedy')
     print(f'\tbest={max(greedy_fitness):<10} worst={min(greedy_fitness):<10} average={sum(greedy_fitness)/repeat:<10}\n\n')
