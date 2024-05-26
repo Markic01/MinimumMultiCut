@@ -1,8 +1,7 @@
-
 import networkx as nx
 import json
-from vns import initialize
 from bruteForce import calc_fitness
+import time
 
 def greedy(graph: nx.Graph, source_terminal_pairs):
     solution = [False for _ in range(len(graph.edges))]
@@ -35,6 +34,7 @@ if __name__ == '__main__':
 
     with open('tests/test_40_0.4.json', 'r') as file:
         source_terminal_pairs = json.load(file)
-
+    start_time = time.time()
     best_code, best_fitness = greedy(graph, source_terminal_pairs)
+    print("--- %s seconds ---" % (time.time() - start_time))
     print(best_fitness)

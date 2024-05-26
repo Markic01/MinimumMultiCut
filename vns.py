@@ -4,6 +4,7 @@ import json
 import random
 from copy import deepcopy
 from time import perf_counter
+import time
 
 def local_search_invert_best_improvement(solution, value, graph: nx.Graph, source_terminal_pairs):
     improved = True
@@ -78,5 +79,7 @@ if __name__ == '__main__':
     with open('tests/test_40_0.4.json', 'r') as file:
         source_terminal_pairs = json.load(file)
 
+    start_time = time.time()
     best_code, best_fitness = vns_main(graph, source_terminal_pairs)
+    print("--- %s seconds ---" % (time.time() - start_time))
     print(best_fitness)

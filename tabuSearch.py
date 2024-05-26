@@ -1,7 +1,7 @@
 import networkx as nx
 import json
-from vns import initialize
 from bruteForce import calc_fitness
+import time
 
 def get_neighbours(solution):
     neighbours = []
@@ -14,7 +14,7 @@ def get_neighbours(solution):
 
 def tabu_search(graph: nx.Graph, source_terminal_pairs, max_iters):
     iter = 0
-    sol = initialize(graph)
+    sol = [False for _ in range(len(graph.edges))]
     fitness = calc_fitness(sol, graph, source_terminal_pairs)
     best_sol = sol.copy()
     best_fitness = fitness
@@ -53,5 +53,7 @@ if __name__ == '__main__':
     with open('tests/test_40_0.4.json', 'r') as file:
         source_terminal_pairs = json.load(file)
 
+    start_time = time.time()
     best_code, best_fitness = tabu_main(graph, source_terminal_pairs)
+    print("--- %s seconds ---" % (time.time() - start_time))
     print(best_fitness)

@@ -1,7 +1,7 @@
 import random
 import networkx as nx
 import json
-
+import time
 
 class Individual:
     def __init__(self, graph: nx.Graph, source_terminal_pairs: list) -> None:
@@ -99,6 +99,7 @@ if __name__ == '__main__':
 
     with open('tests/test_40_0.4.json', 'r') as file:
         source_terminal_pairs = json.load(file)
-
+    start_time = time.time()
     best_code, best_fitness = ga_main(graph, source_terminal_pairs)
+    print("--- %s seconds ---" % (time.time() - start_time))
     print(best_fitness)
