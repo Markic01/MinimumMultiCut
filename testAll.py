@@ -13,10 +13,10 @@ def do_brute_force(graph: nx.Graph) -> bool:
 input_files = []
 input_json_files = []
 
-for filename in os.listdir('tests'):
+for filename in os.listdir('tests1'):
     if filename.endswith('.json'):
         input_json_files.append(filename)
-        input_files.append(filename[:-5])
+        input_files.append(filename[:-5] + '.in')
 
 repeat = 10
 

@@ -16,7 +16,7 @@ if __name__ == '__main__':
     for edge in graph.edges():
         graph.edges[edge]['weight'] = random.randint(1, 10)
 
-    nx.write_gml(graph, f'tests/test_{num_nodes}_{prob}')
+    nx.write_gml(graph, f'tests/test_{num_nodes}_{prob}.in')
     print(graph)
 
     nodes = list(graph.nodes())

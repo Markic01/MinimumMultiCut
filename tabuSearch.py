@@ -48,9 +48,9 @@ def tabu_main(graph: nx.Graph, source_terminal_pairs):
 
 
 if __name__ == '__main__':
-    graph = nx.read_gml("tests/test_40_0.4")
+    graph = nx.read_gml("tests/test_20_0.4.in")
 
-    with open('tests/test_40_0.4.json', 'r') as file:
+    with open('tests/test_20_0.4.json', 'r') as file:
         source_terminal_pairs = json.load(file)
 
     start_time = time.time()

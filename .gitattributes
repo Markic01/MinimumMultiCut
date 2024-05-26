@@ -1,2 +1,2 @@
 *.json linguist-vendored
-* linguist-vendored
+*.in linguist-vendored
